@@ -20,3 +20,14 @@ C:\Users\UMESH\Desktop\TimCorey\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\C
 C:\Users\UMESH\Desktop\TimCorey\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.dll
 C:\Users\UMESH\Desktop\TimCorey\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.pdb
 C:\Users\UMESH\Desktop\TimCorey\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.csprojAssemblyReference.cache
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.deps.json
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.runtimeconfig.json
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.runtimeconfig.dev.json
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.dll
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.pdb
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.csproj.CoreCompileInputs.cache
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.AssemblyInfoInputs.cache
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.AssemblyInfo.cs
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.dll
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.pdb
+C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.csprojAssemblyReference.cache

@@ -13053,6 +13053,7 @@
     ".NETCoreApp,Version=v2.2": [
       "CoreOperations >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
+      "Microsoft.AspNetCore.Razor.Language >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
       "Swashbuckle.AspNetCore >= 4.0.1"
@@ -13065,11 +13066,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UMESH\\Desktop\\TimCorey\\CoreAPI\\CoreAPI\\CoreAPI.csproj",
+      "projectUniqueName": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\CoreAPI.csproj",
       "projectName": "CoreAPI",
-      "projectPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\CoreAPI\\CoreAPI\\CoreAPI.csproj",
+      "projectPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\CoreAPI.csproj",
       "packagesPath": "C:\\Users\\UMESH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\CoreAPI\\CoreAPI\\obj\\",
+      "outputPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13088,8 +13089,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\UMESH\\Desktop\\TimCorey\\CoreAPI\\CoreOperations\\CoreOperations.csproj": {
-              "projectPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\CoreAPI\\CoreOperations\\CoreOperations.csproj"
+            "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\CoreOperations.csproj": {
+              "projectPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\CoreOperations.csproj"
             }
           }
         }
@@ -13108,6 +13109,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.Razor.Language": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
