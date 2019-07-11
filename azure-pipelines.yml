@@ -16,6 +16,11 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: '**\*.sln'
+    feedsToUse: config
+    nugetConfigPath: 'NuGet.config'
 
 - task: VSBuild@1
   inputs:
