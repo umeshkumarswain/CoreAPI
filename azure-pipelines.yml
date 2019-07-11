@@ -15,12 +15,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@0
-  displayName: 'NuGet restore'
+- task: DotNetCoreCLI@2
+  displayName: Restore NuGet Packages
   inputs:
-    restoreSolution: '**\*.sln'
-    feedsToUse: config
-    nugetConfigPath: 'NuGet.config'
+    command: restore
+    projects: src
 
 - task: VSBuild@1
   inputs:
