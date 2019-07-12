@@ -31,8 +31,10 @@ namespace CoreOperations.Models
             if (!optionsBuilder.IsConfigured)
             {
 
+#pragma warning disable CS1030 // #warning directive
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer(
+#pragma warning restore CS1030 // #warning directive
                     "Server=tcp:adventureworksstaging.database.windows.net,1433;Initial Catalog=adventureworks;Persist Security Info=False;User ID=Umesh;Password=!@#Complex123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }

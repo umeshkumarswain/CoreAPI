@@ -31,3 +31,13 @@ C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp
 C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.dll
 C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.pdb
 C:\Users\UMESH\Desktop\TimCorey\Core\CoreAPI\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.csprojAssemblyReference.cache
+D:\UserData\Z0043RYV\Projects\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.deps.json
+D:\UserData\Z0043RYV\Projects\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.runtimeconfig.json
+D:\UserData\Z0043RYV\Projects\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.runtimeconfig.dev.json
+D:\UserData\Z0043RYV\Projects\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.dll
+D:\UserData\Z0043RYV\Projects\CoreOperations\bin\Debug\netcoreapp2.2\CoreOperations.pdb
+D:\UserData\Z0043RYV\Projects\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.csproj.CoreCompileInputs.cache
+D:\UserData\Z0043RYV\Projects\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.AssemblyInfoInputs.cache
+D:\UserData\Z0043RYV\Projects\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.AssemblyInfo.cs
+D:\UserData\Z0043RYV\Projects\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.dll
+D:\UserData\Z0043RYV\Projects\CoreOperations\obj\Debug\netcoreapp2.2\CoreOperations.pdb

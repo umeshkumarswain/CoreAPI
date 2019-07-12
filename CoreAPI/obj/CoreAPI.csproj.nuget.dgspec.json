@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\CoreAPI.csproj": {}
+    "D:\\UserData\\Z0043RYV\\Projects\\CoreAPI\\CoreAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\CoreAPI.csproj": {
+    "D:\\UserData\\Z0043RYV\\Projects\\CoreAPI\\CoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\CoreAPI.csproj",
+        "projectUniqueName": "D:\\UserData\\Z0043RYV\\Projects\\CoreAPI\\CoreAPI.csproj",
         "projectName": "CoreAPI",
-        "projectPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\CoreAPI.csproj",
-        "packagesPath": "C:\\Users\\UMESH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreAPI\\obj\\",
+        "projectPath": "D:\\UserData\\Z0043RYV\\Projects\\CoreAPI\\CoreAPI.csproj",
+        "packagesPath": "C:\\Users\\Z0043RYV\\.nuget\\packages\\",
+        "outputPath": "D:\\UserData\\Z0043RYV\\Projects\\CoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\UMESH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Z0043RYV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\CoreOperations.csproj": {
-                "projectPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\CoreOperations.csproj"
+              "D:\\UserData\\Z0043RYV\\Projects\\CoreOperations\\CoreOperations.csproj": {
+                "projectPath": "D:\\UserData\\Z0043RYV\\Projects\\CoreOperations\\CoreOperations.csproj"
               }
             }
           }
@@ -50,10 +50,6 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Language": {
-              "target": "Package",
-              "version": "[2.2.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -78,20 +74,20 @@
         }
       }
     },
-    "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\CoreOperations.csproj": {
+    "D:\\UserData\\Z0043RYV\\Projects\\CoreOperations\\CoreOperations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\CoreOperations.csproj",
+        "projectUniqueName": "D:\\UserData\\Z0043RYV\\Projects\\CoreOperations\\CoreOperations.csproj",
         "projectName": "CoreOperations",
-        "projectPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\CoreOperations.csproj",
-        "packagesPath": "C:\\Users\\UMESH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UMESH\\Desktop\\TimCorey\\Core\\CoreAPI\\CoreOperations\\obj\\",
+        "projectPath": "D:\\UserData\\Z0043RYV\\Projects\\CoreOperations\\CoreOperations.csproj",
+        "packagesPath": "C:\\Users\\Z0043RYV\\.nuget\\packages\\",
+        "outputPath": "D:\\UserData\\Z0043RYV\\Projects\\CoreOperations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\UMESH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Z0043RYV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -29,6 +29,17 @@ namespace CoreAPI.Controllers
             var product = _service.GetProductsById(id);
             return product != null ? (ActionResult<Product>)Ok(product) : NotFound();
         }
-
+        [HttpPut]
+        public ActionResult<Product> Update(Product product)
+        {
+            _service.UpdateProduct(product);
+            return Ok("Success");
+        }
+        [HttpDelete]
+        public ActionResult<Product> Delete(Product product)
+        {
+            _service.DeleteeProduct(product);
+            return Ok("Success");
+        }
     }
 }

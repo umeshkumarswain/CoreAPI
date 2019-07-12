@@ -8,6 +8,8 @@ namespace CoreOperations.Services.Interfaces
     {
         List<Product> GetAllProducts();
         Product GetProductsById(int productId);
+        void UpdateProduct(Product product);
+        void DeleteeProduct(Product product);
     }
 
 }
