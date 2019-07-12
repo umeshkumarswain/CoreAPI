@@ -20,10 +20,14 @@ steps:
   inputs:
     versionSpec: 
     checkLatest: true
+
 - task: DotNetCoreInstaller@0
   inputs:
     version: '2.2.0' 
-
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'https://github.com/dotnet/core/blob/master/release-notes/releases.json'
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
