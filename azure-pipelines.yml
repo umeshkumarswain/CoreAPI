@@ -15,10 +15,9 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: UseDotNet@2
+- task: DotNetCoreInstaller@0
   inputs:
-    packageType: 'sdk'
-    version: 
+    version: '2.2.0'
     
 - task: VSBuild@1
   inputs:
