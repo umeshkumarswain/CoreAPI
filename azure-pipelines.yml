@@ -23,10 +23,6 @@ steps:
 - task: DotNetCoreInstaller@0
   inputs:
     version: '2.2.0' 
-    
-- task: DownloadBuildArtifacts@0
-  inputs:
-    downloadPath: '$(System.ArtifactsDirectory)' 
 
 - task: VSBuild@1
   inputs:
