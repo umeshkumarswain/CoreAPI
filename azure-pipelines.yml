@@ -22,7 +22,7 @@ steps:
     checkLatest: true
 - task: DotNetCoreInstaller@0
   inputs:
-    version: '2.1.403' 
+    version: '2.2.0' 
     
 - task: VSBuild@1
   inputs:
