@@ -32,3 +32,6 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'myWebsiteName' 
