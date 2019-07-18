@@ -23,7 +23,7 @@ namespace CoreAPI.Controllers
             var products = _service.GetAllProducts();
             return Ok(products);
         }
-        [HttpGet("{id}")]
+        [HttpPost("{id}")]
         public ActionResult<Product> Get(int id)
         {
             var product = _service.GetProductsById(id);
