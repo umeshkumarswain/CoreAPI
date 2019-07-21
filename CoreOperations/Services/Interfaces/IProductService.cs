@@ -11,5 +11,4 @@ namespace CoreOperations.Services.Interfaces
         void UpdateProduct(Product product);
         void DeleteeProduct(Product product);
     }
-
 }

@@ -27,6 +27,7 @@ namespace CoreAPI
             services.AddDbContext<adventureworksContext>(options =>
                 options.UseSqlServer("Server=tcp:adventureworksstaging.database.windows.net,1433;Initial Catalog=adventureworks;Persist Security Info=False;User ID=Umesh;Password=!@#Complex123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
             services.AddSingleton<IProductService, ProductService>();
+            services.AddSingleton<ICustomerService, CustomerService>();
             services.AddSwaggerGen(swag =>
             {
                 swag.SwaggerDoc("v1", new Info { });
