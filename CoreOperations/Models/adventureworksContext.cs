@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoreOperations.Models
 {
-    public partial class adventureworksContext : DbContext
+    public partial class adventureworksContext : IdentityDbContext<IdentityUser>
     {
         public adventureworksContext()
         {
@@ -41,6 +43,7 @@ namespace CoreOperations.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.HasAnnotation("ProductVersion", "2.2.1-servicing-10028");
 
             modelBuilder.Entity<Address>(entity =>

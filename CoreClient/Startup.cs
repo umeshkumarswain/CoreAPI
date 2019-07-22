@@ -1,15 +1,19 @@
-﻿using CoreOperations.Models;
-using CoreOperations.Services.Implementations;
-using CoreOperations.Services.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using CoreOperations.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
 
-namespace CoreAPI
+namespace WebApplication1
 {
     public class Startup
     {
@@ -23,16 +27,20 @@ namespace CoreAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<adventureworksContext>(options =>
                 options.UseSqlServer("Server=tcp:adventureworksstaging.database.windows.net,1433;Initial Catalog=adventureworks;Persist Security Info=False;User ID=Umesh;Password=!@#Complex123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
-            services.AddSingleton<IProductService, ProductService>();
-            services.AddSingleton<ICustomerService, CustomerService>();
-            services.AddSwaggerGen(swag =>
-            {
-                swag.SwaggerDoc("v1", new Info { });
-            });
 
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<adventureworksContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,17 +52,23 @@ namespace CoreAPI
             }
             else
             {
+                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
-            app.UseSwagger();
-            app.UseSwaggerUI(swag =>
+            app.UseStaticFiles();
+            app.UseAuthentication();
+            app.UseCookiePolicy();
+
+            app.UseMvc(routes =>
             {
-                swag.SwaggerEndpoint("/swagger/v1/swagger.json", "Core API");
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Account}/{action=Register}/{id?}");
             });
+
         }
     }
 }
