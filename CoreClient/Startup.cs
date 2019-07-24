@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Logging;
 
 namespace WebApplication1
 {
@@ -37,10 +38,30 @@ namespace WebApplication1
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<adventureworksContext>(options =>
-                options.UseSqlServer("Server=tcp:adventureworksstaging.database.windows.net,1433;Initial Catalog=adventureworks;Persist Security Info=False;User ID=Umesh;Password=!@#Complex123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+                options.UseSqlServer("Server=tcp:adventureworksstaging.database.windows.net,1433;Initial Catalog=adventureworks;Persist Security Info=False;User ID=Umesh;Password=!@#Complex123;MultipleActiveResultSets=False;Encrypt=True;" +
+                "TrustServerCertificate=False;Connection Timeout=30;"));
+
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<adventureworksContext>();
+
+            IdentityModelEventSource.ShowPII = true;
+
+            services.AddAuthentication(options => {
+                options.DefaultScheme = "Cookies";
+                options.DefaultChallengeScheme = "oidc";
+            }).AddCookie("Cookies")
+              .AddOpenIdConnect("oidc",options => {
+                  options.SignInScheme = "Cookies";
+                  options.Authority = "https://localhost:5001";
+                  options.ClientId = "CoreClient";
+                  options.ResponseType ="code id_token";
+                  options.Scope.Add("openid");
+                  options.Scope.Add("profile");
+                  options.SaveTokens = true;
+                  options.ClientSecret = "secret";
+              })
+            ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,9 +78,9 @@ namespace WebApplication1
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
             app.UseAuthentication();
+            app.UseStaticFiles();
+           
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>

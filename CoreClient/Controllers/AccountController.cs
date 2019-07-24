@@ -1,10 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.Threading.Tasks;
 using CoreClient.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
 namespace CoreClient.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> userManager;
@@ -27,6 +32,7 @@ namespace CoreClient.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
+            await WriteOutIdentityInformation();
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser
@@ -35,7 +41,7 @@ namespace CoreClient.Controllers
                     Email = model.Email
                 };
 
-              
+
                 var result = await userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
@@ -67,6 +73,7 @@ namespace CoreClient.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
+            await WriteOutIdentityInformation();
             if (ModelState.IsValid)
             {
                 var result = await signInManager.PasswordSignInAsync(
@@ -81,6 +88,17 @@ namespace CoreClient.Controllers
             }
 
             return View(model);
+        }
+
+        public async Task WriteOutIdentityInformation()
+        {
+            var identityToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.IdToken);
+            Debug.WriteLine($"Identity Token :{identityToken}");
+
+            foreach (var item in User.Claims)
+            {
+                Debug.WriteLine($"[Claim Id : {item.Type},Claim Value :{item.Value}]");
+            }
         }
     }
 }
